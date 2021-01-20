@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+
+        {% block javascripts %}{% endblock %}
+    </head>
+    <body>
+        {% for flash in app.flashes('success') %}
+            <div>Flash: {{ flash }}</div>
+        {% endfor %}
+
+        {% block body %}{% endblock %}
+    </body>
+</html>

@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    {% if user %}
+        Logged as {{ user.email }}
+        Go to <a href="/change-password">Change password</a>
+    {% else %}
+        Not logged
+    {% endif %}
+{% endblock %}
